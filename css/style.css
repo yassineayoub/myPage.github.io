@@ -31,27 +31,39 @@ body {
     font-weight: bold;
     /* font-style: italic;   */
 }
-.header__job--left{
+.header__job{
+    
     font-size: 1.3rem;
     text-align: center;
-    animation: jobleft 3s ;
-    display: inline-block;
-    animation-timing-function: cubic-bezier(0.55, 0.45, 0.675, 1.1);
+    font-style: italic; 
 }
-.header__job--right{
-    font-size: 1.3rem;
-    text-align: center;
+.header__job--left{
     display: inline-block;
-    animation: jobright 3s;
+    animation-name: jobleft, colorchange;
+    animation-delay: 0s, 3s;
+    animation-duration: 3s, 1.5s ;
+    animation-timing-function: cubic-bezier(0.55, 0.45, 0.675, 1.1);
+ 
+    
+}
+/* .header__job--left{
+    animation: colorchange 2s ease;
+    animation-delay: 3s;
+} */
+.header__job--right{
+    display: inline-block;
+    animation-name: jobright, colorchange;
+    animation-delay: 0s, 3s;
+    animation-duration: 3s, 1.5s ;
     animation-timing-function: cubic-bezier(0.55, 0.45, 0.675, 1.1);
 
-    font-style: italic;  
+
   
 }
 
 
 .section-one{
-    height: calc(80vh - var(--header-hight));
+    min-height: 80vh;
     
 }
 .section-two__background{
@@ -114,6 +126,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 250px);
+    justify-content: center;
     margin: 0 auto;
     gap: 1rem;
 
@@ -149,6 +162,20 @@ body {
     }
   }
 
+  @keyframes colorchange {
+    from {
+        color: white;
+       
+    }
+    50%{
+        color: black;
+        
+    }
+    to {
+        color: white;
+
+    }
+  }
 
 /* 
 Medium	md	≥768px
