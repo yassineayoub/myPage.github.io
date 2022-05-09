@@ -3,6 +3,9 @@
 * {
     font-family: 'Josefin Sans', sans-serif;
 }
+body {
+    transition: 0.3s;
+}
 
 
 .headerContainer {
@@ -62,6 +65,7 @@ form {
     grid-template-columns: 1fr 1fr auto;
     grid-template-rows: minmax(45px, auto);
     margin-bottom: 1px;
+    align-items: center;
     border-bottom: solid 1px;
     border-radius: 5px;
     background: #cce6f4;
@@ -200,8 +204,12 @@ button[class*="btn--"] {
 
 .btn--delete {
     width: 45px;
+
     cursor: pointer;
     height: 45px;
+}
+.btn--delete i {
+    display: flex;
 }
 
 button svg {
@@ -261,13 +269,28 @@ button svg {
 }
 
 /* reseau sociaux  */
+.rs.darkTheme {
+    font-size: 2rem;
+    color: #9784b6
+}
+.rs.darkTheme:hover {
+    color: white;
+}
 .rs {
     font-size: 2rem;
     color: #9784b6
 }
-
-a .rs:hover {
+.rs:hover {
     color: black;
+}
+
+.theme-btn {
+    grid-column: 2;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
 }
 
 .footer {
@@ -297,6 +320,14 @@ a .rs:hover {
 .pDescrib {
     margin: 5px;
 }
+.btn__PM {
+    font-size: 30px;
+    display: flex;
+    cursor: pointer;
+    gap: 3px;
+    margin-right: 1rem;
+}
+
 
 input:target {
     color: #3ece86;
@@ -305,6 +336,24 @@ input:target {
 .hidden {
     display: none;
 }
+
+
+
+/* THEME  */
+
+.darkTheme {
+    background-color: black;
+    color:white;
+    /* border-color: aliceblue; */
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
 
 @media (max-width:768px) {
     body {
